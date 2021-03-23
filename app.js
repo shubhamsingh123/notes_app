@@ -1,5 +1,11 @@
 const chalk = require("chalk");
 
-const greenColor = chalk.green("Success!!!");
+const inputUser = process.argv[2];
 
-console.log(greenColor, chalk.red("Danger!!!"));
+console.log(process.argv);
+
+if (inputUser === "add") {
+  console.log("Adding...");
+} else if (inputUser === "remove") {
+  console.log("Removing Notes");
+}
