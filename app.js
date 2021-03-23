@@ -1,4 +1,4 @@
-const firstName = require("./utils");
+const add = require("./utils");
 
 const sum = add(1, 3);
 
