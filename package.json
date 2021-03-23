@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shubhamsingh123/notes_app#readme",
   "dependencies": {
+    "chalk": "^2.4.0",
     "validator": "^10.8.0"
   }
 }
