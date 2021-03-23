@@ -1,9 +1,5 @@
-const firstName = "shubham";
-
-console.log(firstName);
-
-var add = function (a, b) {
-  return a + b;
+const getNotes = function () {
+  return "Hey This is your notes...";
 };
 
-module.exports = add;
+module.exports = getNotes;
