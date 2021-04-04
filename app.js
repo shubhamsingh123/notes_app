@@ -1,10 +1,9 @@
-const validator = require("validator");
-const getNotes = require("./notes");
+const chalk = require("chalk");
 
-// const msg = getNotes();
+const log = console.log;
 
-const mail = "shubham16cse06gmail.com";
-
-console.log(validator.isEmail(mail));
-
-// console.log(msg);
+log(chalk.blue("Hello Shubham"));
+log(chalk.green("Hello Shubham"));
+log(chalk.yellow("Hello Shubham"));
+log(chalk.underline.bgBlue("Hello Shubham"));
+log(chalk.red("Hello " + chalk.green.underline.bold("with a blue substring")));

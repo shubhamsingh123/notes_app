@@ -17,10 +17,9 @@
   },
   "homepage": "https://github.com/shubhamsingh123/notes_app#readme",
   "dependencies": {
-    "chalk": "^2.4.0",
-    "validator": "^10.8.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.1",
+    "chalk": "^2.4.2",
     "connect-flash": "^0.1.1",
     "express": "^4.15.4",
     "express-handlebars": "^3.0.0",
@@ -30,6 +29,7 @@
     "nodemon": "^1.19.4",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "uuid": "^3.3.3"
+    "uuid": "^3.3.3",
+    "validator": "^10.8.0"
   }
 }
