@@ -1,5 +1,5 @@
-const fs = require("fs");
-const appendFileSync = require("fs");
+const add = require("./notes");
 
-fs.writeFileSync("notes.txt", "My name is shubham.");
-fs.appendFileSync("notes.txt", " This is append file sync.");
+const sum = add(4, -2);
+
+console.log(sum);
