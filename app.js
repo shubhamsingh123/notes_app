@@ -1,5 +1,10 @@
+const validator = require("validator");
 const getNotes = require("./notes");
 
-const msg = getNotes();
+// const msg = getNotes();
 
-console.log(msg);
+const mail = "shubham16cse06gmail.com";
+
+console.log(validator.isEmail(mail));
+
+// console.log(msg);
