@@ -1,9 +1,8 @@
 const chalk = require("chalk");
+const cmd = process.argv[2];
 
-const log = console.log;
-
-log(chalk.blue("Hello Shubham"));
-log(chalk.green("Hello Shubham"));
-log(chalk.yellow("Hello Shubham"));
-log(chalk.underline.bgBlue("Hello Shubham"));
-log(chalk.red("Hello " + chalk.green.underline.bold("with a blue substring")));
+if (cmd === "add") {
+  console.log(chalk.green("Adding Notes!!!"));
+} else if (cmd === "remove") {
+  console.log(chalk.red("Removing Notes!!!"));
+}

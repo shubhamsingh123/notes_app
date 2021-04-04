@@ -1,35 +1,16 @@
 {
-  "name": "notes_application",
+  "name": "notes-app",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/shubhamsingh123/notes_app.git"
-  },
-  "author": "shubham singh",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/shubhamsingh123/notes_app/issues"
-  },
-  "homepage": "https://github.com/shubhamsingh123/notes_app#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.18.1",
-    "chalk": "^2.4.2",
-    "connect-flash": "^0.1.1",
-    "express": "^4.15.4",
-    "express-handlebars": "^3.0.0",
-    "express-session": "^1.15.5",
-    "method-override": "^2.3.9",
-    "mongoose": "^4.11.12",
-    "nodemon": "^1.19.4",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0",
-    "uuid": "^3.3.3",
-    "validator": "^10.8.0"
+    "chalk": "^2.4.1",
+    "validator": "^10.8.0",
+    "yargs": "^12.0.2"
   }
 }
