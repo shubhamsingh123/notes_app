@@ -1,10 +1,25 @@
 const chalk = require("chalk");
-const cmd = process.argv[2];
+const yargs = require("yargs");
 
-if (cmd === "add") {
-  console.log(chalk.green("Adding Notes!!!"));
-} else if (cmd === "remove") {
-  console.log(chalk.red("Removing Notes!!!"));
-} else {
-  console.log("process.argv is false");
-}
+// customize the version
+yargs.version("1.1.0");
+
+// create add command
+yargs.command({
+  command: "add",
+  describe: "Add a new note",
+  handler: function () {
+    console.log("Adding a new note!");
+  },
+});
+
+// creating a remove command
+yargs.command({
+  command: "remove",
+  describe: "Remove a new command",
+  handler: function () {
+    console.log("Removing a note!");
+  },
+});
+
+console.log(yargs.argv);
