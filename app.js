@@ -1,4 +1,4 @@
-const chalk = require("chalk");
+// const chalk = require("chalk");
 const yargs = require("yargs");
 
 // customize the version
@@ -11,6 +11,11 @@ yargs.command({
   builder: {
     title: {
       describe: "note title",
+      demandOption: true,
+      type: "string",
+    },
+    body: {
+      describe: "Note Body",
       demandOption: true,
       type: "string",
     },
