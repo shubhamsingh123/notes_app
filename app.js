@@ -1,57 +1,12 @@
-const chalk = require("chalk");
-const yargs = require("yargs");
-const notes = require("./notes");
+const fs = require("fs");
 
-// customize the version
-yargs.version("1.1.0");
+const name = {
+  firstName: "Shubham",
+  lastName: "Singh",
+};
 
-// create add command
-yargs.command({
-  command: "add",
-  describe: "Add a new note",
-  builder: {
-    title: {
-      describe: "note title",
-      demandOption: true,
-      type: "string",
-    },
-    body: {
-      describe: "Note Body",
-      demandOption: true,
-      type: "string",
-    },
-  },
-  handler: function (argv) {
-    notes.addNotes(argv.title, argv.body);
-  },
-});
+const newName = { ...name, age: 24, hometown: "Dhanbad" };
 
-// creating a remove command
-yargs.command({
-  command: "remove",
-  describe: "Remove a note",
-  handler: function () {
-    console.log("Removing a note!");
-  },
-});
+const jsonObject = JSON.stringify(newName);
 
-// creating a list command
-yargs.command({
-  command: "list",
-  describe: "listing the notes",
-  handler: function () {
-    console.log("List the notes!");
-  },
-});
-
-// creating a read command
-yargs.command({
-  command: "read",
-  describe: "read the notes",
-  handler: function () {
-    console.log("Read the notes!");
-  },
-});
-
-// console.log(yargs.argv);
-yargs.parse();
+fs.writeFileSync("notes.txt", jsonObject);
