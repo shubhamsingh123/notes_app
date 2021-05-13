@@ -1,12 +1,6 @@
-const fs = require("fs");
+const fileSystem = require("fs");
 
-const name = {
-  firstName: "Shubham",
-  lastName: "Singh",
-};
-
-const newName = { ...name, age: 24, hometown: "Dhanbad" };
-
-const jsonObject = JSON.stringify(newName);
-
-fs.writeFileSync("notes.txt", jsonObject);
+fileSystem.writeFileSync(
+  "notes.txt",
+  "Hello This is shubham , And i am from INDIA"
+);
