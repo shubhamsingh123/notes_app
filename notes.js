@@ -1,8 +1,6 @@
-console.log("utils.js");
-
-const name = {
-  name: "shubham singh",
-  age: 32,
+const person = {
+  name: "Shubham",
+  age: "24",
 };
 
-module.exports = name;
+module.exports = person;

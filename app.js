@@ -1,65 +1,33 @@
+// Getting input from the user
 const chalk = require("chalk");
+const name = require("./notes");
 const yargs = require("yargs");
-const getNotes = require("./notes");
 
-console.log(chalk.yellow.inverse.bold("Hello Shubham , How are you!!!"));
+//customize the version
+yargs.version("1.1.0");
 
-//Customize yargs version
-yargs.version("2.2.2");
-
-// add , remove , read , list
-
-// creating add command
+//add , remove , read , list
 
 yargs.command({
   command: "add",
-  describe: "Add a notes",
+  describe: "Adds two number",
   builder: {
-    title: {
-      describe: "New notes",
-      required: true,
-      type: "string",
+    firstNumber: {
+      describe: "First Number",
+      demandOption: true, // Required
+      type: "number",
     },
-    body: {
-      describe: "New Body",
-      required: true,
-      type: "string",
+    secondNumber: {
+      describe: "Second Number",
+      demandOption: true,
+      type: "number",
     },
   },
+
+  // Function for your command
   handler: function (argv) {
-    console.log(`Title : ${argv.title}`);
-    console.log(`Body : ${argv.body}`);
+    console.log(`Result ${argv.firstNumber + argv.secondNumber}`);
   },
 });
 
-// Create remove command
-
-yargs.command({
-  command: "remove",
-  describe: "Removing a new notes!!!",
-  handler: function () {
-    console.log("Removing a noew Notesss !!!");
-  },
-});
-
-// Creating a read command
-
-yargs.command({
-  command: "read",
-  describe: "Want to read notes!!!",
-  handler: function () {
-    console.log("Want to read the notes!!!");
-  },
-});
-
-// Creating a list command
-
-yargs.command({
-  command: "list",
-  describe: "List out the title",
-  handler: function () {
-    console.log("List out the title!!!");
-  },
-});
-
-yargs.parse();
+console.log(yargs.argv);
