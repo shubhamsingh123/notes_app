@@ -11,15 +11,15 @@ yargs.version("1.1.0");
 
 yargs.command({
   command: "add",
-  describe: "Adds two number",
+  describe: "adding notes",
   builder: {
     title: {
-      describe: "First Number",
+      describe: "title",
       demandOption: true, // Required
       type: "string",
     },
     body: {
-      describe: "Second Number",
+      describe: "body",
       demandOption: true,
       type: "string",
     },
@@ -30,5 +30,21 @@ yargs.command({
     notes.addNote(argv.title , argv.body)
   },
 });
+
+
+yargs.command({
+  command : 'remove',
+  describe : 'removing notes',
+  builder : {
+    title : {
+      describe : 'Note title',
+      required : true,
+      type : 'string'
+    }
+  },
+  handle : function(argv){
+    notes.removeNote(argv.title)
+  }
+})
 
 console.log(yargs.argv);
