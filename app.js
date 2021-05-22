@@ -40,11 +40,11 @@ yargs.command({
       describe : 'Note title',
       required : true,
       type : 'string'
-    }
+    },
   },
-  handle : function(argv){
+  handler : function(argv){
     notes.removeNote(argv.title)
-  }
+  },
 })
 
 console.log(yargs.argv);
