@@ -2,6 +2,7 @@
 const chalk = require("chalk");
 const name = require("./notes");
 const yargs = require("yargs");
+const notes = require('./notes.js')
 
 //customize the version
 yargs.version("1.1.0");
@@ -12,21 +13,21 @@ yargs.command({
   command: "add",
   describe: "Adds two number",
   builder: {
-    firstNumber: {
+    title: {
       describe: "First Number",
       demandOption: true, // Required
-      type: "number",
+      type: "string",
     },
-    secondNumber: {
+    body: {
       describe: "Second Number",
       demandOption: true,
-      type: "number",
+      type: "string",
     },
   },
 
   // Function for your command
   handler: function (argv) {
-    console.log(`Result ${argv.firstNumber + argv.secondNumber}`);
+    notes.addNote(argv.title , argv.body)
   },
 });
 
