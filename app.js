@@ -45,6 +45,17 @@ yargs.command({
   handler : function(argv){
     notes.removeNote(argv.title)
   },
+});
+
+
+yargs.command({
+  command : 'list',
+  describe : 'listing notes',
+  handler : function(argv){
+    notes.listNotes()
+  },
 })
+
+
 
 console.log(yargs.argv);

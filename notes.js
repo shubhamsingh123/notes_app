@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+const chalk = require('chalk')
 
 const getNotes = () => {
   return 'Hello Shubham'
@@ -38,6 +39,18 @@ const saveNotes = (notes) => {
       fs.writeFileSync('notes.json' , dataJson)
 }
 
+const listNotes = () => {
+  const printNotes = loadNotes();
+
+  console.log(chalk.inverse.bold.green('Your Notes!!!'));
+
+  printNotes.forEach((note)=>{
+    console.log(note.title)
+  })
+
+
+}
+
 
 
 
@@ -57,5 +70,6 @@ const loadNotes = () => {
 module.exports = {
   getNotes : getNotes, 
   addNote : addNote,
-  removeNote : removeNote
+  removeNote : removeNote,
+  listNotes : listNotes
 }
